@@ -15,3 +15,21 @@ starlette==1.6.0
 typing-inspection==0.4.4
 typing_extensions==4.16.0
 uvicorn==0.52.4
+fastapi
+uvicorn[standard]
+
+# Database
+sqlalchemy[asyncio]
+asyncpg
+alembic
+
+# Authentication
+pyjwt
+pwdlib[argon2]
+
+# Configuration
+python-dotenv
+
+# Existing Route Agent dependencies
+google-genai
+httpx
