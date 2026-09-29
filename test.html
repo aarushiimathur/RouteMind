@@ -102,7 +102,9 @@
         box-shadow: 0 0 0 3px #e1f3e8;
     }
 
-    .status.thinking { color: #806100; }
+    .status.thinking {
+        color: #806100;
+    }
 
     .status.thinking .status-dot {
         background: #d39a12;
@@ -117,7 +119,11 @@
         color: white;
         margin-bottom: 12px;
         box-shadow: 0 8px 25px rgba(20, 70, 42, .16);
-        transition: max-height .28s ease, padding .28s ease, margin .28s ease, opacity .2s ease;
+        transition:
+            max-height .28s ease,
+            padding .28s ease,
+            margin .28s ease,
+            opacity .2s ease;
         overflow: hidden;
         max-height: 180px;
     }
@@ -173,7 +179,9 @@
         overscroll-behavior: contain;
     }
 
-    #chat::-webkit-scrollbar { width: 7px; }
+    #chat::-webkit-scrollbar {
+        width: 7px;
+    }
 
     #chat::-webkit-scrollbar-thumb {
         background: #d2dad5;
@@ -187,8 +195,13 @@
         margin: 8px 0;
     }
 
-    .message-row.user-row { justify-content: flex-end; }
-    .message-row.agent-row { justify-content: flex-start; }
+    .message-row.user-row {
+        justify-content: flex-end;
+    }
+
+    .message-row.agent-row {
+        justify-content: flex-start;
+    }
 
     .message {
         width: fit-content;
@@ -237,7 +250,9 @@
         border: 1px solid #d6ddda;
     }
 
-    .thinking { align-items: flex-end; }
+    .thinking {
+        align-items: flex-end;
+    }
 
     .thinking-bubble {
         display: flex;
@@ -260,12 +275,24 @@
         animation: typingBounce 1.35s infinite ease-in-out;
     }
 
-    .dot:nth-child(2) { animation-delay: .18s; }
-    .dot:nth-child(3) { animation-delay: .36s; }
+    .dot:nth-child(2) {
+        animation-delay: .18s;
+    }
+
+    .dot:nth-child(3) {
+        animation-delay: .36s;
+    }
 
     @keyframes typingBounce {
-        0%, 60%, 100% { transform: translateY(0); opacity: .35; }
-        30% { transform: translateY(-4px); opacity: 1; }
+        0%, 60%, 100% {
+            transform: translateY(0);
+            opacity: .35;
+        }
+
+        30% {
+            transform: translateY(-4px);
+            opacity: 1;
+        }
     }
 
     .welcome {
@@ -385,7 +412,9 @@
         padding-right: 10px;
     }
 
-    .stat:last-child { border-right: 0; }
+    .stat:last-child {
+        border-right: 0;
+    }
 
     .stat-value {
         font-size: 14px;
@@ -414,7 +443,9 @@
         border: 1px solid var(--border);
     }
 
-    .maps-button:hover { background: var(--primary-light); }
+    .maps-button:hover {
+        background: var(--primary-light);
+    }
 
     .day-header {
         display: flex;
@@ -458,7 +489,9 @@
         margin-bottom: 11px;
     }
 
-    .stop:last-child { margin-bottom: 0; }
+    .stop:last-child {
+        margin-bottom: 0;
+    }
 
     .stop-dot {
         position: absolute;
@@ -488,7 +521,9 @@
         margin-bottom: 5px;
     }
 
-    .stop-icon { margin-right: 5px; }
+    .stop-icon {
+        margin-right: 5px;
+    }
 
     .stop-name {
         font-size: 14px;
@@ -562,8 +597,14 @@
         box-shadow: 0 3px 8px rgba(31,122,77,.18);
     }
 
-    button:hover { background: var(--primary-dark); }
-    button:disabled { cursor: not-allowed; opacity: .55; }
+    button:hover {
+        background: var(--primary-dark);
+    }
+
+    button:disabled {
+        cursor: not-allowed;
+        opacity: .55;
+    }
 
     @media (max-width: 700px) {
         .app {
@@ -579,7 +620,9 @@
             border-bottom: 1px solid var(--border);
         }
 
-        .brand-subtitle { display: none; }
+        .brand-subtitle {
+            display: none;
+        }
 
         .hero {
             border-radius: 0;
@@ -601,7 +644,9 @@
             border-bottom: 0;
         }
 
-        #chat { padding: 14px 12px; }
+        #chat {
+            padding: 14px 12px;
+        }
 
         .message {
             max-width: 76%;
@@ -618,7 +663,9 @@
             grid-template-columns: repeat(2, 1fr);
         }
 
-        .stat:nth-child(2) { border-right: 0; }
+        .stat:nth-child(2) {
+            border-right: 0;
+        }
 
         .stat:nth-child(3),
         .stat:nth-child(4) {
@@ -626,17 +673,26 @@
             padding-top: 9px;
         }
 
-        .stat:nth-child(4) { border-right: 0; }
+        .stat:nth-child(4) {
+            border-right: 0;
+        }
 
         .day-header {
             align-items: flex-start;
             flex-direction: column;
         }
 
-        .route-badge { display: none; }
+        .route-badge {
+            display: none;
+        }
 
-        .input-area { padding: 9px; }
-        button { padding: 0 15px; }
+        .input-area {
+            padding: 9px;
+        }
+
+        button {
+            padding: 0 15px;
+        }
     }
 
 </style>
@@ -649,9 +705,12 @@
     <header class="topbar">
         <div class="brand">
             <div class="brand-icon">↗</div>
+
             <div>
                 <div class="brand-name">Route Agent</div>
-                <div class="brand-subtitle">AI-powered road trip planner</div>
+                <div class="brand-subtitle">
+                    AI-powered road trip planner
+                </div>
             </div>
         </div>
 
@@ -662,32 +721,63 @@
     </header>
 
     <section class="hero" id="hero">
-        <div class="hero-kicker">Your personal road-trip assistant</div>
-        <h1>Plan the journey,<br>not just the destination.</h1>
-        <p>Tell Route Agent where you're going and let it organize the journey for you.</p>
+        <div class="hero-kicker">
+            Your personal road-trip assistant
+        </div>
+
+        <h1>
+            Plan the journey,<br>
+            not just the destination.
+        </h1>
+
+        <p>
+            Tell Route Agent where you're going and let it organize the journey for you.
+        </p>
     </section>
 
     <div class="chat-shell">
+
         <div id="chat">
+
             <div class="welcome">
+
                 <div>
-                    <div class="welcome-icon">🧭</div>
-                    <h2>Where are you headed?</h2>
+
+                    <div class="welcome-icon">
+                        🧭
+                    </div>
+
+                    <h2>
+                        Where are you headed?
+                    </h2>
+
                     <p>
                         Tell me your starting point, destination, travelers and trip duration.
                         I'll turn it into a day-by-day road trip.
                     </p>
 
                     <div class="suggestions">
-                        <span class="suggestion">Ahmedabad → Bangalore</span>
-                        <span class="suggestion">Mumbai → Goa</span>
-                        <span class="suggestion">Delhi → Jaipur</span>
+                        <span class="suggestion">
+                            Ahmedabad → Bangalore
+                        </span>
+
+                        <span class="suggestion">
+                            Mumbai → Goa
+                        </span>
+
+                        <span class="suggestion">
+                            Delhi → Jaipur
+                        </span>
                     </div>
+
                 </div>
+
             </div>
+
         </div>
 
         <div class="input-area">
+
             <input
                 id="messageInput"
                 type="text"
@@ -696,92 +786,169 @@
                 onkeydown="handleKey(event)"
             >
 
-            <button id="sendButton" onclick="sendMessage()">
+            <button
+                id="sendButton"
+                onclick="sendMessage()"
+            >
                 Send
             </button>
+
         </div>
+
     </div>
+
 </div>
 
 <script>
+
 let conversationId = null;
 let thinkingMessage = null;
 let isSending = false;
 let welcomeVisible = true;
 
+
 function addMessage(text, sender) {
+
     removeWelcome();
     collapseHero();
 
     const chat = document.getElementById("chat");
 
     const row = document.createElement("div");
-    row.className = "message-row " + (sender === "user" ? "user-row" : "agent-row");
+
+    row.className =
+        "message-row " +
+        (sender === "user"
+            ? "user-row"
+            : "agent-row");
 
     const avatar = document.createElement("div");
-    avatar.className = "avatar " + (sender === "user" ? "user-avatar" : "bot-avatar");
-    avatar.textContent = sender === "user" ? "U" : "R";
+
+    avatar.className =
+        "avatar " +
+        (sender === "user"
+            ? "user-avatar"
+            : "bot-avatar");
+
+    avatar.textContent =
+        sender === "user"
+            ? "U"
+            : "R";
 
     const bubble = document.createElement("div");
-    bubble.className = "message " + (sender === "user" ? "user" : "bot-bubble");
+
+    bubble.className =
+        "message " +
+        (sender === "user"
+            ? "user"
+            : "bot-bubble");
+
     bubble.textContent = text;
 
     if (sender === "user") {
+
         row.appendChild(bubble);
         row.appendChild(avatar);
+
     } else {
+
         row.appendChild(avatar);
         row.appendChild(bubble);
+
     }
 
     chat.appendChild(row);
+
     chat.scrollTop = chat.scrollHeight;
 }
 
+
 function collapseHero() {
-    const hero = document.getElementById("hero");
-    if (hero) hero.classList.add("collapsed");
-}
 
-function setThinkingStatus(isThinking) {
-    const status = document.getElementById("status");
-    const statusText = document.getElementById("statusText");
+    const hero =
+        document.getElementById("hero");
 
-    if (!status || !statusText) return;
-
-    if (isThinking) {
-        status.classList.add("thinking");
-        statusText.textContent = "Planning your trip";
-    } else {
-        status.classList.remove("thinking");
-        statusText.textContent = "Ready to plan";
+    if (hero) {
+        hero.classList.add("collapsed");
     }
 }
 
-function removeWelcome() {
-    if (!welcomeVisible) return;
 
-    const welcome = document.querySelector(".welcome");
-    if (welcome) welcome.remove();
+function setThinkingStatus(isThinking) {
+
+    const status =
+        document.getElementById("status");
+
+    const statusText =
+        document.getElementById("statusText");
+
+    if (!status || !statusText) {
+        return;
+    }
+
+    if (isThinking) {
+
+        status.classList.add("thinking");
+
+        statusText.textContent =
+            "Planning your trip";
+
+    } else {
+
+        status.classList.remove("thinking");
+
+        statusText.textContent =
+            "Ready to plan";
+
+    }
+}
+
+
+function removeWelcome() {
+
+    if (!welcomeVisible) {
+        return;
+    }
+
+    const welcome =
+        document.querySelector(".welcome");
+
+    if (welcome) {
+        welcome.remove();
+    }
 
     welcomeVisible = false;
 }
 
-function showThinking() {
-    const chat = document.getElementById("chat");
 
-    if (thinkingMessage) return;
+function showThinking() {
+
+    const chat =
+        document.getElementById("chat");
+
+    if (thinkingMessage) {
+        return;
+    }
 
     removeWelcome();
     collapseHero();
     setThinkingStatus(true);
 
-    thinkingMessage = document.createElement("div");
-    thinkingMessage.className = "message-row agent-row thinking";
+    thinkingMessage =
+        document.createElement("div");
+
+    thinkingMessage.className =
+        "message-row agent-row thinking";
 
     thinkingMessage.innerHTML = `
-        <div class="avatar bot-avatar">R</div>
-        <div class="thinking-bubble" aria-label="Route Agent is planning">
+        <div class="avatar bot-avatar">
+            R
+        </div>
+
+        <div
+            class="thinking-bubble"
+            aria-label="Route Agent is planning"
+        >
             <span class="dot"></span>
             <span class="dot"></span>
             <span class="dot"></span>
@@ -789,32 +956,49 @@ function showThinking() {
     `;
 
     chat.appendChild(thinkingMessage);
-    chat.scrollTop = chat.scrollHeight;
+
+    chat.scrollTop =
+        chat.scrollHeight;
 }
 
+
 function hideThinking() {
+
     if (thinkingMessage) {
+
         thinkingMessage.remove();
+
         thinkingMessage = null;
     }
 
     setThinkingStatus(false);
 }
 
+
 function getStopIcon(type) {
+
     const icons = {
+
         "LUNCH": "🍴",
+
         "FUEL": "⛽",
+
         "WASHROOM": "🚻",
+
         "OPTIONAL": "⭐",
+
         "OVERNIGHT": "🛏️",
+
         "ARRIVAL": "🏁"
+
     };
 
     return icons[type] || "📍";
 }
 
+
 function cleanText(text) {
+
     return text
         .replace(/\*\*/g, "")
         .replace(/__/g, "")
@@ -822,132 +1006,293 @@ function cleanText(text) {
         .trim();
 }
 
+
 function extractLink(line) {
-    const cleanLine = cleanText(line);
 
-    if (!cleanLine) return "";
+    const cleanLine =
+        cleanText(line);
 
-    if (!cleanLine.toUpperCase().startsWith("LINK:")) {
+    if (!cleanLine) {
         return "";
     }
 
-    return cleanLine.substring(5).trim();
+    if (
+        !cleanLine
+            .toUpperCase()
+            .startsWith("LINK:")
+    ) {
+        return "";
+    }
+
+    return cleanLine
+        .substring(5)
+        .trim();
 }
 
+
 function renderTripResponse(text) {
-    const lines = text
-        .split("\n")
-        .map(line => line.trim())
-        .filter(line => line.length > 0);
+
+    const lines =
+        text
+            .split("\n")
+            .map(line => line.trim())
+            .filter(line => line.length > 0);
 
     let trip = null;
+
     let days = [];
+
     let currentDay = null;
 
     const sectionNames = [
+
         "TRIP",
+
         "DAY",
+
         "LUNCH",
+
         "FUEL",
+
         "WASHROOM",
+
         "OPTIONAL",
+
         "OVERNIGHT",
+
         "TRAFFIC",
+
         "ARRIVAL"
+
     ];
 
-    for (let i = 0; i < lines.length; i++) {
-        const line = cleanText(lines[i]);
-        const upperLine = line.toUpperCase();
+
+    for (
+        let i = 0;
+        i < lines.length;
+        i++
+    ) {
+
+        const line =
+            cleanText(lines[i]);
+
+        const upperLine =
+            line.toUpperCase();
+
 
         if (upperLine === "TRIP") {
+
             trip = {
-                route: cleanText(lines[i + 1] || ""),
-                summary: cleanText(lines[i + 2] || ""),
-                mapsUrl: extractLink(lines[i + 3] || "")
+
+                route:
+                    cleanText(
+                        lines[i + 1] || ""
+                    ),
+
+                summary:
+                    cleanText(
+                        lines[i + 2] || ""
+                    ),
+
+                mapsUrl:
+                    extractLink(
+                        lines[i + 3] || ""
+                    )
+
             };
 
             i += 3;
+
             continue;
         }
 
+
         if (/^DAY\s+\d+$/i.test(line)) {
+
             currentDay = {
-                number: line.match(/\d+/)[0],
-                route: cleanText(lines[i + 1] || ""),
-                meta: cleanText(lines[i + 2] || ""),
+
+                number:
+                    line.match(/\d+/)[0],
+
+                route:
+                    cleanText(
+                        lines[i + 1] || ""
+                    ),
+
+                meta:
+                    cleanText(
+                        lines[i + 2] || ""
+                    ),
+
                 stops: [],
+
                 traffic: null
+
             };
 
             days.push(currentDay);
+
             i += 2;
+
             continue;
         }
 
+
         if (
-            sectionNames.includes(upperLine) &&
-            upperLine !== "TRIP" &&
-            upperLine !== "DAY" &&
-            upperLine !== "TRAFFIC"
+
+            sectionNames.includes(upperLine)
+
+            && upperLine !== "TRIP"
+
+            && upperLine !== "DAY"
+
+            && upperLine !== "TRAFFIC"
+
         ) {
-            const type = upperLine;
-            const name = cleanText(lines[i + 1] || "");
-            const description = cleanText(lines[i + 2] || "");
-            const mapsUrl = extractLink(lines[i + 3] || "");
+
+            const type =
+                upperLine;
+
+            const name =
+                cleanText(
+                    lines[i + 1] || ""
+                );
+
+            const description =
+                cleanText(
+                    lines[i + 2] || ""
+                );
+
+            const mapsUrl =
+                extractLink(
+                    lines[i + 3] || ""
+                );
+
 
             if (currentDay) {
+
                 currentDay.stops.push({
+
                     type,
+
                     name,
+
                     description,
+
                     mapsUrl
+
                 });
 
                 i += 3;
+
             }
 
             continue;
         }
 
+
         if (upperLine === "TRAFFIC") {
+
             if (currentDay) {
-                currentDay.traffic = cleanText(lines[i + 1] || "");
+
+                currentDay.traffic =
+                    cleanText(
+                        lines[i + 1] || ""
+                    );
+
                 i += 1;
+
             }
+
         }
+
     }
+
 
     if (!trip || days.length === 0) {
+
         return createFallbackMessage(text);
+
     }
 
-    const wrapper = document.createElement("div");
-    wrapper.className = "message agent";
 
-    const tripCard = document.createElement("div");
-    tripCard.className = "trip-card";
+    const wrapper =
+        document.createElement("div");
 
-    const summaryParts = trip.summary.split("•").map(x => x.trim());
+    wrapper.className =
+        "message agent";
+
+
+    const tripCard =
+        document.createElement("div");
+
+    tripCard.className =
+        "trip-card";
+
+
+    const summaryParts =
+        trip.summary
+            .split("•")
+            .map(x => x.trim());
+
 
     let statsHTML = "";
 
+
     if (summaryParts.length > 1) {
-        const labels = ["Distance", "Driving time", "Trip duration", "Details"];
+
+        const labels = [
+
+            "Distance",
+
+            "Driving time",
+
+            "Trip duration",
+
+            "Details"
+
+        ];
+
 
         statsHTML = `
+
             <div class="trip-stats">
-                ${summaryParts.slice(0, 4).map((part, index) => `
+
+                ${summaryParts
+                    .slice(0, 4)
+                    .map((part, index) => `
+
                     <div class="stat">
-                        <div class="stat-value">${escapeHtml(part)}</div>
-                        <div class="stat-label">${labels[index] || "Info"}</div>
+
+                        <div class="stat-value">
+
+                            ${escapeHtml(part)}
+
+                        </div>
+
+                        <div class="stat-label">
+
+                            ${labels[index] || "Info"}
+
+                        </div>
+
                     </div>
-                `).join("")}
+
+                `)
+                .join("")}
+
             </div>
+
         `;
+
     }
 
-    const tripMapsButton = trip.mapsUrl ? `
+
+    const tripMapsButton =
+        trip.mapsUrl
+
+            ? `
+
         <a
             class="maps-button"
             href="${escapeHtml(trip.mapsUrl)}"
@@ -956,47 +1301,107 @@ function renderTripResponse(text) {
         >
             📍 Open full route in Google Maps
         </a>
-    ` : "";
+
+    `
+
+            : "";
+
 
     tripCard.innerHTML = `
+
         <div class="trip-top">
+
             <div>
-                <div class="trip-label">Your road trip</div>
-                <div class="trip-route">${escapeHtml(trip.route)}</div>
-                <div class="trip-summary">${escapeHtml(trip.summary)}</div>
+
+                <div class="trip-label">
+                    Your road trip
+                </div>
+
+                <div class="trip-route">
+                    ${escapeHtml(trip.route)}
+                </div>
+
+                <div class="trip-summary">
+                    ${escapeHtml(trip.summary)}
+                </div>
+
             </div>
 
-            <div class="route-badge">ROAD TRIP</div>
+            <div class="route-badge">
+                ROAD TRIP
+            </div>
+
         </div>
 
         ${statsHTML}
+
         ${tripMapsButton}
+
     `;
+
 
     wrapper.appendChild(tripCard);
 
+
     days.forEach(day => {
-        const dayCard = document.createElement("div");
-        dayCard.className = "day-card";
+
+        const dayCard =
+            document.createElement("div");
+
+        dayCard.className =
+            "day-card";
+
 
         let html = `
+
             <div class="day-header">
+
                 <div>
-                    <div class="day-number">Day ${escapeHtml(day.number)}</div>
-                    <div class="day-route">${escapeHtml(day.route)}</div>
-                    <div class="day-meta">${escapeHtml(day.meta)}</div>
+
+                    <div class="day-number">
+
+                        Day ${escapeHtml(day.number)}
+
+                    </div>
+
+                    <div class="day-route">
+
+                        ${escapeHtml(day.route)}
+
+                    </div>
+
+                    <div class="day-meta">
+
+                        ${escapeHtml(day.meta)}
+
+                    </div>
+
                 </div>
 
                 <div class="day-pill">
-                    ${day.stops.length} planned ${day.stops.length === 1 ? "stop" : "stops"}
+
+                    ${day.stops.length}
+                    planned
+                    ${day.stops.length === 1
+                        ? "stop"
+                        : "stops"}
+
                 </div>
+
             </div>
 
             <div class="timeline">
+
         `;
 
+
         day.stops.forEach(stop => {
-            const mapsButton = stop.mapsUrl ? `
+
+            const mapsButton =
+                stop.mapsUrl
+
+                    ? `
+
                 <a
                     class="maps-button"
                     href="${escapeHtml(stop.mapsUrl)}"
@@ -1005,180 +1410,371 @@ function renderTripResponse(text) {
                 >
                     📍 View location
                 </a>
-            ` : "";
+
+            `
+
+                    : "";
+
 
             html += `
+
                 <div class="stop">
+
                     <div class="stop-dot"></div>
 
                     <div class="stop-card">
+
                         <div class="stop-type">
-                            <span class="stop-icon">${getStopIcon(stop.type)}</span>
+
+                            <span class="stop-icon">
+
+                                ${getStopIcon(stop.type)}
+
+                            </span>
+
                             ${escapeHtml(stop.type)}
+
                         </div>
 
                         <div class="stop-name">
+
                             ${escapeHtml(stop.name)}
+
                         </div>
 
                         <div class="stop-description">
+
                             ${escapeHtml(stop.description)}
+
                         </div>
 
                         ${mapsButton}
+
                     </div>
+
                 </div>
+
             `;
+
         });
 
-        html += `</div>`;
+
+        html += `
+
+            </div>
+
+        `;
+
 
         if (day.traffic) {
+
             html += `
+
                 <div class="traffic">
-                    🚦 <strong>Traffic:</strong>
+
+                    🚦
+
+                    <strong>Traffic:</strong>
+
                     ${escapeHtml(day.traffic)}
+
                 </div>
+
             `;
+
         }
 
-        dayCard.innerHTML = html;
+
+        dayCard.innerHTML =
+            html;
+
         wrapper.appendChild(dayCard);
+
     });
 
-    const lastLines = lines.filter(line =>
-        line.startsWith("Want me") ||
-        line.startsWith("Would you")
-    );
+
+    const lastLines =
+        lines.filter(line =>
+
+            line.startsWith("Want me") ||
+
+            line.startsWith("Would you")
+
+        );
+
 
     if (lastLines.length > 0) {
-        const ending = document.createElement("div");
 
-        ending.style.margin = "5px 5px 15px";
-        ending.style.color = "#6d766f";
-        ending.style.fontSize = "13px";
+        const ending =
+            document.createElement("div");
 
-        ending.textContent = lastLines[lastLines.length - 1];
+        ending.style.margin =
+            "5px 5px 15px";
+
+        ending.style.color =
+            "#6d766f";
+
+        ending.style.fontSize =
+            "13px";
+
+        ending.textContent =
+            lastLines[lastLines.length - 1];
+
         wrapper.appendChild(ending);
+
     }
 
+
     return wrapper;
 }
+
 
 function createFallbackMessage(text) {
-    const wrapper = document.createElement("div");
 
-    wrapper.className = "message agent";
-    wrapper.textContent = text || "I couldn't generate a response.";
+    const wrapper =
+        document.createElement("div");
+
+    wrapper.className =
+        "message agent";
+
+    wrapper.textContent =
+        text ||
+        "I couldn't generate a response.";
 
     return wrapper;
 }
 
+
 function escapeHtml(text) {
-    const div = document.createElement("div");
-    div.textContent = text || "";
+
+    const div =
+        document.createElement("div");
+
+    div.textContent =
+        text || "";
+
     return div.innerHTML;
 }
 
+
 function addAgentResponse(text) {
-    const chat = document.getElementById("chat");
-    const rendered = renderTripResponse(text || "");
 
-    const row = document.createElement("div");
-    row.className = "message-row agent-row";
+    const chat =
+        document.getElementById("chat");
 
-    const avatar = document.createElement("div");
-    avatar.className = "avatar bot-avatar";
-    avatar.textContent = "R";
+    const rendered =
+        renderTripResponse(text || "");
 
-    const content = document.createElement("div");
-    content.style.minWidth = "0";
-    content.style.flex = "1";
+
+    const row =
+        document.createElement("div");
+
+    row.className =
+        "message-row agent-row";
+
+
+    const avatar =
+        document.createElement("div");
+
+    avatar.className =
+        "avatar bot-avatar";
+
+    avatar.textContent =
+        "R";
+
+
+    const content =
+        document.createElement("div");
+
+    content.style.minWidth =
+        "0";
+
+    content.style.flex =
+        "1";
+
 
     content.appendChild(rendered);
+
     row.appendChild(avatar);
+
     row.appendChild(content);
+
     chat.appendChild(row);
-    chat.scrollTop = chat.scrollHeight;
+
+    chat.scrollTop =
+        chat.scrollHeight;
 }
 
+
 async function sendMessage() {
-    if (isSending) return;
 
-    const input = document.getElementById("messageInput");
-    const button = document.getElementById("sendButton");
-    const message = input.value.trim();
+    if (isSending) {
+        return;
+    }
 
-    if (!message) return;
+
+    const input =
+        document.getElementById("messageInput");
+
+    const button =
+        document.getElementById("sendButton");
+
+    const message =
+        input.value.trim();
+
+
+    if (!message) {
+        return;
+    }
+
 
     isSending = true;
 
-    addMessage(message, "user");
+
+    addMessage(
+        message,
+        "user"
+    );
+
     input.value = "";
 
+
     showThinking();
+
     button.disabled = true;
 
+
     try {
-        const response = await fetch(
-            "http://127.0.0.1:8000/chat",
-            {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    message: message,
-                    conversation_id: conversationId
-                })
-            }
-        );
+
+        /*
+         * IMPORTANT FOR DEPLOYMENT:
+         *
+         * We use /chat instead of
+         * http://127.0.0.1:8000/chat
+         *
+         * This means the browser automatically
+         * sends the request to the same server
+         * that is serving this HTML file.
+         */
+
+        const response =
+            await fetch(
+                "/chat",
+                {
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type":
+                            "application/json"
+                    },
+
+                    body: JSON.stringify({
+
+                        message:
+                            message,
+
+                        conversation_id:
+                            conversationId
+
+                    })
+                }
+            );
+
 
         if (!response.ok) {
-            throw new Error("API request failed: " + response.status);
+
+            throw new Error(
+                "API request failed: " +
+                response.status
+            );
+
         }
 
-        const data = await response.json();
 
-        conversationId = data.conversation_id;
+        const data =
+            await response.json();
+
+
+        conversationId =
+            data.conversation_id;
+
 
         hideThinking();
 
-        if (data.reply && data.reply.trim()) {
-            addAgentResponse(data.reply);
-        } else {
-            addMessage(
-                "The agent did not return a response. Please try again.",
-                "agent"
+
+        if (
+            data.reply &&
+            data.reply.trim()
+        ) {
+
+            addAgentResponse(
+                data.reply
             );
+
+        } else {
+
+            addMessage(
+
+                "The agent did not return a response. Please try again.",
+
+                "agent"
+
+            );
+
         }
+
 
     } catch (error) {
+
         hideThinking();
 
+
         addMessage(
-            "Error connecting to backend: " + error.message,
+
+            "Error connecting to backend: " +
+            error.message,
+
             "agent"
+
         );
+
+
     } finally {
+
         isSending = false;
+
         button.disabled = false;
+
         input.focus();
+
     }
+
 }
+
 
 function handleKey(event) {
+
     if (
+
         event.key === "Enter" &&
+
         !event.shiftKey
+
     ) {
+
         event.preventDefault();
 
+
         if (!isSending) {
+
             sendMessage();
+
         }
+
     }
+
 }
+
 </script>
 
 </body>
