@@ -211,9 +211,20 @@ For every LUNCH, FUEL, WASHROOM, OPTIONAL, and OVERNIGHT stop:
 <short useful description or location>
 LINK: <maps_url>
 
-Only use maps_url values returned by tools.
+Only use the EXACT maps_url string returned by the tools.
 
-NEVER invent a Google Maps URL.
+NEVER create, guess, generate, or rewrite a maps_url yourself.
+
+NEVER use placeholder or sample URLs such as:
+sample_
+sample_lunch
+sample_optional
+goo.gl
+maps.app.goo.gl
+
+If a POI does not have a maps_url returned by a tool, DO NOT include a LINK line for that POI.
+
+The LINK value must be copied character-for-character from the tool result.
 
 Do not modify or rewrite maps_url values.
 
